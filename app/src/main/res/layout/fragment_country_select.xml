@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <elf.m.passportsimple.ui.view.ToolbarControl
+        android:id="@+id/id_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleText="@string/select_country"
+        app:backimage="@drawable/ic_normal_back" />
+
+    <TextView
+        android:id="@+id/tv_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DFDFDF"
+        android:layout_below="@id/id_toolbar"/>
+    <TextView
+        android:id="@+id/et_query_word"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/tv_divider"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:text="@string/country_select_title"
+        android:background="#F5F8FA"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/et_query_word"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="23dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_coutry"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="23dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

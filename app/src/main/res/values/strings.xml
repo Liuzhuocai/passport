@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">PassPortSimple</string>
+    <string name="home">首页</string>
+    <string name="discover">发现</string>
+    <string name="shop">商店</string>
+    <string name="login">登录</string>
+    <string name="system">账户</string>
+    <string name="swipe">侧滑返回</string>
+    <string name="go_swipe_back">SwipeBackActivity+Fragment</string>
+
+    <string name="spent">spent</string>
+    <string name="creditTransfer">creditTransfer</string>
+    <string name="recharge">recharge</string>
+
+    <string name="password">密码</string>
+    <string name="register">注册</string>
+
+    <string name="bottom_bar_home">home</string>
+    <string name="bottom_bar_cloud">cloud</string>
+    <string name="bottom_bar_website">condor</string>
+    <string name="bottom_bar_mine">mine</string>
+    <string name="title_activity_login">Sign in</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_phone">Phone</string>
+    <string name="prompt_account">Account</string>
+    <string name="prompt_note">Note</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign</string>
+    <string name="action_sign_up">Sign up</string>
+    <string name="default_account_text">0cp</string>
+    <string name="action_switch_login">switch login</string>
+    <string name="action_forget_password">Forget password</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_phone">This phone number is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_incorrect_account">This account is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
+    <string name="toolbar_normal_back">返回</string>
+    <!-- Strings related to register -->
+    <string name="register_verify_password">verify password</string>
+    <string name="register_phone">register phone</string>
+    <string name="register_country">register country</string>
+    <string name="register_city">register city</string>
+    <string name="register_first_name">register first name</string>
+    <string name="register_last_name">register last name</string>
+    <string name="msg_please_login_in">please login in</string>
+
+    <!-- Strings related to forgot password -->
+    <string name="title_forgot_password">forgot password</string>
+    <string name="register_verify_code_resend">resent otp</string>
+    <string name="action_sent_otp">sent otp</string>
+    <string name="other_recharge">other recharge</string>
+
+
+    <string name="recharge_code_error">recharge code error</string>
+    <string name="recharge_completed">recharge completed</string>
+    <string name="transfer_completed">transfer completed</string>
+    <string name="recharge_code">recharge code</string>
+    <string name="recharge_btn_text">recharge</string>
+    <string name="credit_transfer_btn_text">credit transfer</string>
+    <!-- Strings my information -->
+    <string name="information_me_sex_string">性别</string>
+    <string name="information_me_first_name_string">first name</string>
+    <string name="information_me_last_name_string">last name</string>
+    <string name="information_me_birthday_string">生日</string>
+    <string name="information_me_location_string">地区</string>
+    <string name="information_me_country_string">国家</string>
+    <string name="information_me_todo_string">暂无</string>
+    <string name="information_me">个人信息</string>
+    <string name="information_me_gender_title">选择性别</string>
+    <string name="information_me_dialog_take_photo">拍照</string>
+    <string name="information_me_dialog_get_photo">从本地选择</string>
+    <string name="information_me_dialog_cancel">取消</string>
+    <string name="fragment_me_account">用户账号</string>
+    <string name="fragment_me_user_name_text">未命名</string>
+    <string name="country_select_title">全部</string>
+
+    <string name="gender_male">M</string>
+    <string name="gender_female">F</string>
+    <string name="select_country">选择国家</string>
+    <string name="default_region">中国</string>
+</resources>

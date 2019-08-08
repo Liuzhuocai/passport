@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <!--toolbar color-->
+    <color name="tool_bar_bg_color">#0E86FF</color>
+    <color name="tool_bar_text_color">#000000</color>
+    <!--bottom bar color-->
+    <color name="bottom_bar_text_color_normal">#999999</color>
+    <color name="bottom_bar_text_color_selected">#4753FB</color>
+
+    <color name="login_register_button_color">#F9FDFE</color>
+    <color name="settings_title_color">#333333</color>
+    <color name="settings_summary_color">#999999</color>
+
+    <color name="information_bg_color">#F5F8FA</color>
+</resources>

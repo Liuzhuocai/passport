@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="home_item" >
+        <item>Account</item>
+        <item>Recharge</item>
+        <item>Transfer Accounts</item>
+        <item>After Sale</item>
+        <item>Scan QR</item>
+        <item>My QR</item>
+    </string-array>
+    <declare-styleable name="ToolbarControl">
+        <attr name="titleText" format="string" />
+        <attr name="backText" format="string" />
+        <attr name="backimage" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="HeaderCircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+        <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="PreferenceItemView">
+        <attr name="item_text" format="string" />
+        <attr name="item_tip" format="string" />
+        <attr name="item_ext_info" format="string" />
+        <attr name="image_type_src" format="reference" />
+        <attr name="next_tip_coexist" format="boolean" />
+    </declare-styleable>
+
+    <string-array name="gender_array" >
+        <item>@string/gender_male</item>
+        <item>@string/gender_female</item>
+    </string-array>
+</resources>
+

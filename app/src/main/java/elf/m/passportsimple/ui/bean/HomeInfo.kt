@@ -9,4 +9,4 @@ import elf.m.passportsimple.ui.fragment.base.BaseBackFragment
  *
 
  */
-data class HomeInfo (var title: String,var type:BaseBackFragment)
+data class HomeInfo (var title: String,var type:BaseBackFragment,var isActivity:Boolean)

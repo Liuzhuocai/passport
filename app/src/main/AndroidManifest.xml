@@ -36,8 +36,9 @@
         </activity>
         <activity android:name=".ui.activity.MainActivity">
         </activity>
-        <activity android:name=".ui.fragment.CountrySelectActivity"
+        <activity android:name=".ui.country.CountrySelectActivity"
                   android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".ui.zxing.EasyCaptureActivity"/>
 
 
         <!-- Pushy Declarations -->

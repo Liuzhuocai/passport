@@ -1,4 +1,4 @@
-package elf.m.passportsimple.ui.fragment;
+package elf.m.passportsimple.ui.country;
 
 import android.graphics.Color;
 import android.os.Build;
@@ -10,10 +10,6 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import elf.m.passportsimple.R;
-import elf.m.passportsimple.ui.country.CountryAdapter;
-import elf.m.passportsimple.ui.country.CountryBean;
-import elf.m.passportsimple.ui.country.CountryPresenter;
-import elf.m.passportsimple.ui.country.ICountryView;
 import elf.m.passportsimple.ui.view.ToolbarControl;
 import org.greenrobot.eventbus.EventBus;
 

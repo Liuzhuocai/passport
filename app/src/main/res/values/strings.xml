@@ -83,4 +83,5 @@
     <string name="gender_female">F</string>
     <string name="select_country">选择国家</string>
     <string name="default_region">中国</string>
+    <string name="permission_camera">App扫码需要用到拍摄权限</string>
 </resources>

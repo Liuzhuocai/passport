@@ -8,12 +8,14 @@ import android.view.View
 import android.view.ViewGroup
 import elf.m.passportsimple.R
 import elf.m.passportsimple.ui.Config
+import elf.m.passportsimple.ui.event.ScanEvent
 import elf.m.passportsimple.ui.fragment.base.BaseHomeItemFragment
 import elf.m.passportsimple.ui.http.RetrofitManager
 import elf.m.passportsimple.ui.utils.isPasswordValid
 import elf.m.passportsimple.ui.utils.isPhoneValid
 import elf.m.passportsimple.ui.utils.toast
 import kotlinx.android.synthetic.main.fragment_credit_transfer.*
+import kotlinx.android.synthetic.main.fragment_credit_transfer.view.*
 import rx.android.schedulers.AndroidSchedulers
 import rx.schedulers.Schedulers
 
@@ -28,12 +30,21 @@ open class CreditTransferFragment: BaseHomeItemFragment() {
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_credit_transfer, container, false)
+        val phone = arguments?.getString("account")
+        val view = inflater.inflate(R.layout.fragment_credit_transfer, container, false)
+        if(!TextUtils.isEmpty(phone)){
+            view.ccp_login.visibility = View.GONE
+            view.phone_number_edt.setText(phone)
+            view.phone_number_edt.isEnabled = false
+        }
+
+        return view
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         ccp_login.registerPhoneNumberTextView(phone_number_edt)
+
         initAccount()
         commit_btn.setOnClickListener {
             codeCommit()
@@ -110,6 +121,14 @@ open class CreditTransferFragment: BaseHomeItemFragment() {
             val args = Bundle()
             val fragment = CreditTransferFragment()
             args.putString("title",title)
+            fragment.arguments = args
+            return fragment
+        }
+        fun newInstance(title:String,events:ScanEvent): CreditTransferFragment {
+            val args = Bundle()
+            val fragment = CreditTransferFragment()
+            args.putString("title",title)
+            args.putString("account",events.phone)
             fragment.arguments = args
             return fragment
         }

@@ -25,8 +25,8 @@ open class SecondFragment:BaseBackFragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        if (findChildFragment<HomeFragment>(HomeFragment::class.java) == null) {
-            loadRootFragment(R.id.fl_first_container, HomeFragment.newInstance())
+        if (findChildFragment<TestFragment>(TestFragment::class.java) == null) {
+            loadRootFragment(R.id.fl_first_container, TestFragment.newInstance())
         }
     }
 

@@ -12,6 +12,13 @@
     <string name="creditTransfer">creditTransfer</string>
     <string name="recharge">recharge</string>
 
+    <string name="home_title_account">Account</string>
+    <string name="home_title_recharge">Recharge</string>
+    <string name="home_title_transfer_accounts">Account</string>
+    <string name="home_title_after_sale">After Sale</string>
+    <string name="home_title_scan_qr">Scan QR</string>
+    <string name="home_title_my_qr">My QR</string>
+
     <string name="password">密码</string>
     <string name="register">注册</string>
 
@@ -84,4 +91,11 @@
     <string name="select_country">选择国家</string>
     <string name="default_region">中国</string>
     <string name="permission_camera">App扫码需要用到拍摄权限</string>
+
+    <!-- Strings zxing -->
+    <string name="scan_complete">scan successful</string>
+
+    <string name="my_qr_title">My QR</string>
+
+
 </resources>

@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="home_item" >
-        <item>Account</item>
-        <item>Recharge</item>
-        <item>Transfer Accounts</item>
-        <item>After Sale</item>
-        <item>Scan QR</item>
-        <item>My QR</item>
+        <item>@string/home_title_account</item>
+        <item>@string/home_title_recharge</item>
+        <item>@string/home_title_transfer_accounts</item>
+        <item>@string/home_title_after_sale</item>
+        <item>@string/home_title_scan_qr</item>
+        <item>@string/home_title_my_qr</item>
     </string-array>
     <declare-styleable name="ToolbarControl">
         <attr name="titleText" format="string" />
         <attr name="backText" format="string" />
         <attr name="backimage" format="reference" />
+        <attr name="rightimage" format="reference" />
+        <attr name="textColor" format="color" />
     </declare-styleable>
     <declare-styleable name="HeaderCircleImageView">
         <attr name="civ_border_width" format="dimension" />

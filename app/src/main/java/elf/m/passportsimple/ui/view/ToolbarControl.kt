@@ -54,7 +54,13 @@ class ToolbarControl : Toolbar, View.OnClickListener {
 
         val imageSrc = a.getResourceId(R.styleable.ToolbarControl_backimage, 0)
         toolbar_back_button!!.setImageResource(imageSrc)
-
+        toolbar_right_image.setImageResource(a.getResourceId(R.styleable.ToolbarControl_rightimage, 0))
+        val color = a.getColor(
+            R.styleable.ToolbarControl_textColor,
+            resources.getColor(R.color.tool_bar_text_color)
+        )
+        toolbar_title.setTextColor(color)
+        toolbar_back_text.setTextColor(color)
         a.recycle()
 
         toolbar_left_text.setOnClickListener(this)

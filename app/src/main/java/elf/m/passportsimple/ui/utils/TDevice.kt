@@ -105,7 +105,7 @@ class TDevice {
 
                 deviceId = getAndroidId()
             }
-            return "355431100001179,355431100001187"/*deviceId*/
+            return "00000000,356000109000125"/*deviceId*/
         }
 
         fun getAndroidId(): String {

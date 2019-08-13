@@ -24,10 +24,10 @@ import elf.m.passportsimple.ui.http.RetrofitManager
 import elf.m.passportsimple.ui.utils.*
 import kotlinx.android.synthetic.main.fragment_login.*
 import kotlinx.android.synthetic.main.fragment_login.email_login_form
-import kotlinx.android.synthetic.main.fragment_login.password_edt
 import kotlinx.android.synthetic.main.fragment_login.email_sign_in_button
 import kotlinx.android.synthetic.main.fragment_login.forget_password
 import kotlinx.android.synthetic.main.fragment_login.login_progress
+import kotlinx.android.synthetic.main.fragment_login.password_edt
 import kotlinx.android.synthetic.main.fragment_login.sign_up
 import kotlinx.android.synthetic.main.fragment_login.switch_login_type
 import kotlinx.android.synthetic.main.fragment_login_phone.*
@@ -115,7 +115,7 @@ open class LoginFragment : BaseBackFragment() {
 
         /* Pushy.getDeviceCredentials(context).token?.let {
              RetrofitManager.loginByPassword(
-                 it,email.text.trim().toString()*//*"137768480@qq.com"*//*,
+                 it,phone.text.trim().toString()*//*"137768480@qq.com"*//*,
                 *//*"+8613410365214"*//*"",password.text.toString()*//*"123456"*//*,*//*"355431100001179,355431100001187"*//*TDevice.getDeviceId()
                 ,"dz.condor.ThemeParc",*//*"Griffe T9 Plus"*//*Build.MODEL,"condor")
                 .subscribeOn(Schedulers.io())
@@ -135,7 +135,7 @@ open class LoginFragment : BaseBackFragment() {
         //ThemePark
         /* Pushy.getDeviceCredentials(context).token?.let {
              RetrofitManager.loginByPassword(
-                 it,email.text.trim().toString(),
+                 it,phone.text.trim().toString(),
                  "+8615980904762",password.text.toString(),TDevice.getDeviceId()
                  ,"dz.condor.ThemeParc","Griffe T9 Plus","condor")
                  .subscribeOn(Schedulers.io())
@@ -207,7 +207,7 @@ open class LoginFragment : BaseBackFragment() {
             cancel = true
         }
 
-        // Check for a valid email address.
+        // Check for a valid phone address.
         if (isEmailType()) {
             if (TextUtils.isEmpty(accountStr)) {
                 email.error = getString(R.string.error_field_required)
@@ -263,6 +263,7 @@ open class LoginFragment : BaseBackFragment() {
                             put(Config.JWTTOKEN, it.Result.jwttoken)
                             put(Config.JWTREFRESHTOKEN, it.Result.jwtrefreshtoken)
                             put(Config.USER_ID, it.Result.user_id)
+                            put(Config.SP_PHONE, it.Result.phone)
                             startActivity(Intent(_mActivity, MainActivity::class.java))
                             _mActivity.finish()
                         }

@@ -20,7 +20,7 @@ import elf.m.passportsimple.R
 import elf.m.passportsimple.ui.Config
 import elf.m.passportsimple.ui.country.CountryBean
 import elf.m.passportsimple.ui.country.CountrySelectActivity
-import elf.m.passportsimple.ui.fragment.base.BaseInformationFragment
+import elf.m.passportsimple.ui.fragment.base.BaseActionBarFragment
 import elf.m.passportsimple.ui.http.RetrofitManager
 import elf.m.passportsimple.ui.http.data.result.UserProfileResultData
 import elf.m.passportsimple.ui.view.PreferenceItemView
@@ -39,7 +39,7 @@ import rx.schedulers.Schedulers
  *
 
  */
-open class MineFragment: BaseInformationFragment() {
+open class MineFragment: BaseActionBarFragment() {
     lateinit var timePickerView: TimePickerView
     lateinit var userProfile:UserProfileResultData
     lateinit var  pickerView: OptionsPickerView<String>

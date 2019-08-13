@@ -72,7 +72,8 @@ object Config {
     val ACCOUNT_TYPE_SPENT = 0
     val ACCOUNT_TYPE_CREDIT_TRANSFER = 1
     val ACCOUNT_TYPE_RECHARGE = 2
-
+    val REQUEST_CODE_PHOTO = 0X02
+    val REQUEST_CODE_SCAN = 0X01
 
     enum class LoginType {
         LOGIN_IN, LOGIN_OUT

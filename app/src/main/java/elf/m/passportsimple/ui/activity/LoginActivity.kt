@@ -11,7 +11,7 @@ import elf.m.passportsimple.ui.fragment.base.BaseActivity
 import elf.m.passportsimple.ui.fragment.base.BaseBackFragment
 
 /**
- * A login screen that offers login via email/password.
+ * A login screen that offers login via phone/password.
  */
 class LoginActivity : BaseActivity() , BaseBackFragment.OnBackToFirstListener {
     override fun onBackToFirstFragment() {

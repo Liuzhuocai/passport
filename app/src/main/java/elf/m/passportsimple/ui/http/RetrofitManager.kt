@@ -60,7 +60,7 @@ class RetrofitManager {
          */
         /* fun Register(
             device_token: String,
-            email: String,
+            phone: String,
             phone: String,
             password: String,
             imei_no: String,
@@ -68,7 +68,7 @@ class RetrofitManager {
             model: String,
             brand: String
         ): Observable<BaseHttpResultData<LoginResultData>> {
-            val request = LoginRequestData(device_token,email,phone,password,imei_no,app_package)
+            val request = LoginRequestData(device_token,phone,phone,password,imei_no,app_package)
             return RetrofitHelper.getInstance()?.service!!.loginByPassword(HttpUtil.createRequestBody(request))
         }*/
         fun getToken(

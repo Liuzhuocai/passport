@@ -75,7 +75,7 @@ open class RegisterFragment:BaseBackFragment() {
             cancel = true
         }
 
-        // Check for a valid email address.
+        // Check for a valid phone address.
         if (TextUtils.isEmpty(phoneNum)) {
             phone_number_edt.error = getString(R.string.error_field_required)
             focusView = phone_number_edt

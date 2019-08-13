@@ -78,6 +78,7 @@ class MainActivity : BaseActivity() ,BaseBackFragment.OnBackToFirstListener{
         put(Config.JWTTOKEN, "")
         put(Config.JWTREFRESHTOKEN, "")
         put(Config.USER_ID, "")
+        put(Config.SP_PHONE, "")
         startActivity(Intent(this, LoginActivity::class.java))
         finish()
     }
@@ -88,13 +89,12 @@ class MainActivity : BaseActivity() ,BaseBackFragment.OnBackToFirstListener{
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
                 Log.d("liuzuo99", "onNext=$it")
-                put(Config.JWTTOKEN, it.Result.jwttoken)
-                put(Config.JWTREFRESHTOKEN, it.Result.jwtrefreshtoken)
                 //AccountManager.get(applicationContext).addAccountExplicitly(Account("passport","all"),get(Config.JWTTOKEN,""),Bundle())
                 if (it.Success) {
                     put(Config.JWTTOKEN, it.Result.jwttoken)
                     put(Config.JWTREFRESHTOKEN, it.Result.jwtrefreshtoken)
                     put(Config.USER_ID, it.Result.user_id)
+                    put(Config.SP_PHONE, it.Result.phone)
                 }else{
                     enterLoginActivity()
                 }
@@ -128,8 +128,8 @@ class MainActivity : BaseActivity() ,BaseBackFragment.OnBackToFirstListener{
                     // 如果不在该类别Fragment的主页,则回到主页;
                     if (count!! > 1) {
                         when (currentFragment) {
-                            is NewFirstFragment -> currentFragment.popToChild(TestFragment::class.java, false)
-                            is SecondFragment -> currentFragment.popToChild(HomeFragment::class.java, false)
+                            is NewFirstFragment -> currentFragment.popToChild(HomeFragment::class.java, false)
+                            is SecondFragment -> currentFragment.popToChild(TestFragment::class.java, false)
                             is ThirdFragment -> currentFragment.popToChild(WebsiteFragment::class.java, false)
                             is FourthFragment -> currentFragment.popToChild(MineFragment::class.java, false)
                         }
@@ -152,5 +152,9 @@ class MainActivity : BaseActivity() ,BaseBackFragment.OnBackToFirstListener{
         const val THIRD = 2
         const val FOURTH = 3
         private val CODE_CHECK_PERMISSION = 1001
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
     }
 }

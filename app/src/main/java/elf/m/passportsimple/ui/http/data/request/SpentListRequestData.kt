@@ -8,6 +8,4 @@ package elf.m.passportsimple.ui.http.data.request
 
  */
 data class SpentListRequestData (var user_id:String,
-                                 var page:String
-
-)
+                                 var page:String)

@@ -44,14 +44,14 @@ class EasyCaptureActivity : CaptureActivity() {
     public override fun onCreate(icicle: Bundle?) {
         super.onCreate(icicle)
         toolbar_right_image.visibility = View.VISIBLE
-        StatusBarUtils.immersiveStatusBar(this, toolbar, 0.2f)
+        StatusBarUtils.immersiveStatusBar(this, toolbar_capture, 0.2f)
         /*   TextView tvTitle = findViewById(R.id.tvTitle);
         tvTitle.setText(getIntent().getStringExtra(KEY_TITLE));*/
         captureHelper
             .decodeFormats(DecodeFormatManager.QR_CODE_FORMATS)//设置只识别二维码会提升速度
             .playBeep(true)
             .vibrate(true)
-        toolbar.setBackButtonOnClickListener {
+        toolbar_capture.setBackButtonOnClickListener {
             finish()
             true
         }

@@ -12,6 +12,7 @@ import elf.m.passportsimple.ui.fragment.base.BaseHomeItemFragment
 import elf.m.passportsimple.ui.http.RetrofitManager
 import kotlinx.android.synthetic.main.fragment_home_account.*
 import kotlinx.android.synthetic.main.fragment_home_account.view.*
+import kotlinx.android.synthetic.main.toolbar.*
 import rx.android.schedulers.AndroidSchedulers
 import rx.schedulers.Schedulers
 
@@ -33,6 +34,10 @@ open class AccountFragment: BaseHomeItemFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        toolbar_normal.title = arguments?.getString("title")
+        toolbar_normal.setBackButtonOnClickListener {
+            onBackPressedSupport()
+        }
         initAccount()
     }
 

@@ -1,6 +1,8 @@
 package elf.m.passportsimple.ui.fragment
 
 import android.Manifest
+import android.accounts.Account
+import android.accounts.AccountManager
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
@@ -18,9 +20,12 @@ import androidx.core.content.ContextCompat
 import com.google.android.material.snackbar.Snackbar
 import elf.m.passportsimple.R
 import elf.m.passportsimple.ui.Config
+import elf.m.passportsimple.ui.Config.ACCOUNT_TYPE
+import elf.m.passportsimple.ui.Config.PARAM_USER_PASS
 import elf.m.passportsimple.ui.activity.MainActivity
 import elf.m.passportsimple.ui.fragment.base.BaseBackFragment
 import elf.m.passportsimple.ui.http.RetrofitManager
+import elf.m.passportsimple.ui.http.data.result.LoginResultData
 import elf.m.passportsimple.ui.utils.*
 import kotlinx.android.synthetic.main.fragment_login.*
 import kotlinx.android.synthetic.main.fragment_login.email_login_form
@@ -34,6 +39,7 @@ import kotlinx.android.synthetic.main.fragment_login_phone.*
 import me.pushy.sdk.Pushy
 import rx.android.schedulers.AndroidSchedulers
 import rx.schedulers.Schedulers
+
 
 /**
 
@@ -264,12 +270,16 @@ open class LoginFragment : BaseBackFragment() {
                             put(Config.JWTREFRESHTOKEN, it.Result.jwtrefreshtoken)
                             put(Config.USER_ID, it.Result.user_id)
                             put(Config.SP_PHONE, it.Result.phone)
+
+                            saveAccountInSystem(it.Result,passwordStr)
                             startActivity(Intent(_mActivity, MainActivity::class.java))
                             _mActivity.finish()
                         }
                         AnimationUtils.showProgress(false, email_login_form, login_progress)
                     }, {
-                        Log.d("liuzuo99", "onError=$it")
+                        Log.d("liuzuo99", "onError=${it.suppressed}")
+                        Log.d("liuzuo99", "onError=${it.stackTrace}")
+                        Log.d("liuzuo99", "onError=${it.toString()}")
                         AnimationUtils.showProgress(false, email_login_form, login_progress)
                     }, {
                         Log.d("liuzuo99", "onCompleted")
@@ -277,6 +287,34 @@ open class LoginFragment : BaseBackFragment() {
                     })
             }
         }
+    }
+
+    private fun saveAccountInSystem(
+        result: LoginResultData,
+        passwordStr: String
+    ) {
+        val am = AccountManager.get(_mActivity)
+        val intent = Intent()
+        intent.putExtra(AccountManager.KEY_ACCOUNT_NAME, result.phone)
+        intent.putExtra(AccountManager.KEY_ACCOUNT_TYPE, ACCOUNT_TYPE)
+        intent.putExtra(AccountManager.KEY_AUTHTOKEN, result.jwttoken)
+        intent.putExtra(PARAM_USER_PASS, passwordStr)
+
+        val accountName = intent.getStringExtra(AccountManager.KEY_ACCOUNT_NAME)
+        val accountPassword = intent.getStringExtra(PARAM_USER_PASS)
+        val account = Account(accountName, intent.getStringExtra(AccountManager.KEY_ACCOUNT_TYPE))
+//        if (_mActivity.intent.getBooleanExtra(ARG_IS_ADDING_NEW_ACCOUNT, false)) {
+            val authtoken = intent.getStringExtra(AccountManager.KEY_AUTHTOKEN)
+            val authtokenType = ACCOUNT_TYPE
+            // Creating the account on the device and setting the auth token we got
+            // (Not setting the auth token will cause another call to the server to authenticate the user)
+            am.addAccountExplicitly(account, accountPassword, null)
+            am.setAuthToken(account, authtokenType, authtoken)
+//        } else {
+            am.setPassword(account, accountPassword)
+//        }
+//        setAccountAuthenticatorResult(intent.extras)
+//        setResult(ISupportFragment.RESULT_OK, intent)
     }
 
     private fun startRegisterFragment() {

@@ -9,7 +9,7 @@
         android:theme="@style/Animation.AppCompat.Tooltip">
 
     <elf.m.passportsimple.ui.view.ToolbarControl
-            android:id="@+id/toolbar"
+            android:id="@+id/toolbar_normal"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"

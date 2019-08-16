@@ -14,16 +14,42 @@ android {
         versionName "5.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
+    final String SignPlatform = "GooglePlatform"
+
+    signingConfigs {
+        release {
+            storeFile file("sign/${SignPlatform}.jks")
+            storePassword '123456'
+            keyAlias SignPlatform
+            keyPassword '123456'
+        }
+
+        debug {
+            storeFile file("sign/${SignPlatform}.jks")
+            storePassword '123456'
+            keyAlias SignPlatform
+            keyPassword '123456'
+        }
+    }
+
     buildTypes {
+        debug {
+            minifyEnabled false
+            signingConfig  signingConfigs.debug
+        }
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            //shrinkResources true
+            signingConfig  signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard.flags'
         }
     }
     compileOptions{
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
 }
 
 dependencies {

@@ -134,7 +134,7 @@ open class MineFragment: BaseActionBarFragment() {
              updateUserProfile(userProfile,preferenceItemView,s)
 
         }).build()
-
+        pickerView.setPicker(array.toMutableList())
     }
 
     private fun showEditDialog(preferenceItemView: PreferenceItemView) {

@@ -31,4 +31,19 @@
         <item name="android:background">@drawable/divider_bg</item>
         <item name="android:orientation">vertical</item>
     </style>
+    <style name="home_cloud_switch_style">
+        <item name="android:divider">@drawable/divider_bg</item>
+        <item name="android:showDividers">middle</item>
+        <item name="android:background">@drawable/divider_bg</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingBottom">20dp</item>
+        <item name="android:paddingStart">25dp</item>
+        <item name="android:paddingEnd">25dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:switchMinWidth">40dp</item>
+        <item name="android:thumb">@drawable/condor_settings_thumb</item>
+        <item name="android:track">@drawable/condor_settings_track</item>
+        <item name="android:textSize">20sp</item>
+    </style>
 </resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+    >
+        <ImageView
+                android:id="@+id/cloud_icon_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="80dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/condor"/>
+        <TextView
+                android:id="@+id/cloud_user_name"
+                android:layout_marginTop="80dp"
+                android:textSize="24sp"
+                android:layout_below="@id/cloud_icon_iv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        <LinearLayout
+                android:layout_marginTop="80dp"
+                android:layout_below="@id/cloud_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+        >
+            <Switch
+                    android:id="@+id/could_switcher_theme_park"
+                    android:text="@string/could_switcher_theme_park_text"
+                    style="@style/home_cloud_switch_style"
+            />
+            <Switch
+                    android:id="@+id/could_switcher_note"
+                    android:text="@string/could_switcher_note_text"
+                    style="@style/home_cloud_switch_style"
+            />
+            <Switch
+                    android:id="@+id/could_switcher_sms"
+                    android:text="@string/could_switcher_sms_text"
+                    style="@style/home_cloud_switch_style"
+            />
+            <Switch
+                    android:id="@+id/could_switcher_contacts"
+                    android:text="@string/could_switcher_contacts_text"
+                    style="@style/home_cloud_switch_style"
+            />
+            <TextView
+                    android:id="@+id/could_other_app"
+                    android:text="@string/could_other_app"
+                    android:drawableEnd="@drawable/ic_arrow_back_white_24dp"
+                    style="@style/home_cloud_switch_style"
+            />
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

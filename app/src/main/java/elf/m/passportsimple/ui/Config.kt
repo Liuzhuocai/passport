@@ -75,6 +75,22 @@ object Config {
     val REQUEST_CODE_PHOTO = 0X02
     val REQUEST_CODE_SCAN = 0X01
 
+
+    val ARG_ACCOUNT_TYPE = "ACCOUNT_TYPE"
+    val ARG_AUTH_TYPE = "AUTH_TYPE"
+    val ARG_ACCOUNT_NAME = "ACCOUNT_NAME"
+    val ARG_IS_ADDING_NEW_ACCOUNT = "IS_ADDING_ACCOUNT"
+    val KEY_ERROR_MESSAGE = "ERR_MSG"
+    val PARAM_USER_PASS = "USER_PASS"
+    val ACCOUNT_TYPE = "passport_v6"
+
+
+    val SYN_THEME_PARK = "syn_theme_park"
+    val SYN_NOTE = "syn_note"
+    val SYN_SMS = "syn_sms"
+    val SYN_CONTACTS = "syn_contacts"
+
+
     enum class LoginType {
         LOGIN_IN, LOGIN_OUT
         //登录界面类型

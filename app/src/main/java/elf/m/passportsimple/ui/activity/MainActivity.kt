@@ -58,7 +58,7 @@ class MainActivity : BaseActivity() ,BaseBackFragment.OnBackToFirstListener{
             .subscribe({
                 Log.d("liuzuo99", "onNext=$it")
 
-                //AccountManager.get(applicationContext).addAccountExplicitly(Account("passport","all"),get(Config.JWTTOKEN,""),Bundle())
+                // .get(applicationContext).addAccountExplicitly(Account("passport","all"),get(Config.JWTTOKEN,""),Bundle())
                 if (it.Success) {
 
                 }else{
@@ -129,7 +129,7 @@ class MainActivity : BaseActivity() ,BaseBackFragment.OnBackToFirstListener{
                     if (count!! > 1) {
                         when (currentFragment) {
                             is NewFirstFragment -> currentFragment.popToChild(HomeFragment::class.java, false)
-                            is SecondFragment -> currentFragment.popToChild(TestFragment::class.java, false)
+                            is SecondFragment -> currentFragment.popToChild(CloudFragment::class.java, false)
                             is ThirdFragment -> currentFragment.popToChild(WebsiteFragment::class.java, false)
                             is FourthFragment -> currentFragment.popToChild(MineFragment::class.java, false)
                         }

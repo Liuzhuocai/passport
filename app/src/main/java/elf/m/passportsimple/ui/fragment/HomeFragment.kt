@@ -56,7 +56,7 @@ open class HomeFragment:BaseBackFragment() {
     }
     private fun initView() {
         val arrayList = ArrayList<HomeInfo>()
-        home_recycleview.layoutManager = GridLayoutManager(context,2)
+        home_recycleview.layoutManager = GridLayoutManager(context,3)
         val array = resources.getStringArray(R.array.home_item)
 
         for (i in array.indices){

@@ -5,6 +5,7 @@
     <!-- To auto-complete the phone text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
@@ -17,6 +18,8 @@
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 
+
+
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
@@ -28,7 +31,7 @@
             android:theme="@style/AppTheme">
         <activity
                 android:name=".ui.activity.LoginActivity"
-                android:label="@string/title_activity_login">
+                android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -81,7 +84,9 @@
         <!-- End Pushy Declarations -->
 
         <!-- account manager -->
-        <service android:name=".ui.account.UdinicAuthenticatorService">
+        <service android:name=".ui.account.PassportAuthenticatorService"
+                 android:exported="true"
+        >
             <intent-filter>
                 <action android:name="android.accounts.AccountAuthenticator" />
             </intent-filter>

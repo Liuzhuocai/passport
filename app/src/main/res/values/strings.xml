@@ -95,7 +95,10 @@
     <!-- Strings zxing -->
     <string name="scan_complete">scan successful</string>
 
-    <string name="my_qr_title">My QR</string>
-
-
+    <string name="could_switcher_theme_park_text">Theme Park数据同步</string>
+    <string name="could_switcher_note_text">note数据同步</string>
+    <string name="could_switcher_sms_text">短信数据同步</string>
+    <string name="could_switcher_contacts_text">联系人数据同步</string>
+    <string name="could_other_app">关联产品</string>
+    <string name="my_qr_title">MY QR</string>
 </resources>

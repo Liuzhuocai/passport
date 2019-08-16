@@ -36,7 +36,7 @@
             android:background="@drawable/bg_information_user"
         >
             <elf.m.passportsimple.ui.view.HeaderCircleImageView
-                android:id="@+id/information_me_icon_iv"
+                android:id="@+id/cloud_icon_iv"
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_alignParentTop="true"
